@@ -1,0 +1,9 @@
+.footer {
+    & hr {
+        border: .5px solid #49fb35;
+    }
+    & p {
+        text-align: center;
+        color: white;
+    }
+}

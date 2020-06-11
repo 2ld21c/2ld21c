@@ -1,0 +1,26 @@
+{
+  "name": "condemnation-game",
+  "version": "1.0.0",
+  "description": "\"A book about the fundamental nature of human experience\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "book",
+    "philosophy",
+    "psychology"
+  ],
+  "author": "willjw3",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.17.7",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-sass": "^2.1.20",
+    "gatsby-source-filesystem": "^2.3.10",
+    "gatsby-transformer-remark": "^2.8.14",
+    "node-sass": "^4.13.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}

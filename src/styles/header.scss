@@ -1,0 +1,36 @@
+.header {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    &-title {
+        width: 40%;
+        text-align: center;
+        & h1 {
+            font-family: "Special Elite";
+            font-weight: 200;
+        }   
+    }
+    &-links {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        &-link {
+            text-decoration: none;
+            color: lightgray;
+            & h2 {
+                font-family: "Rubik";
+                font-weight: 100;
+                // text-shadow: .5px .5px beige;
+                &:hover {
+                    color: gray;
+                }
+            }
+        }
+    }
+}
