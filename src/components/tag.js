@@ -3,10 +3,9 @@ import { Link } from "gatsby";
 import "../styles/tag.scss";
 
 const Tag = ({tag, count}) => {
-    console.log(tag)
     return (
         <div className="tag">
-            <Link to={`/tags/${tag}/`}>
+            <Link to={`/tags/${tag.toLowerCase()}/`}>
                 <button>{tag} <small>{count}</small> </button>
             </Link>
         </div>

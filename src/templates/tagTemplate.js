@@ -18,7 +18,6 @@ const TagTemplate = ({pageContext, data}) => {
                 <i><h2>{tagHeader}</h2></i>
                 {posts.map((post, i) => {
                     const tags = post.node.frontmatter.tags;
-                    console.log(tags)
                     return (
                         <div className="tagtemplate-body-post" key={i}>
                             <Link className="tagtemplate-body-post-link"

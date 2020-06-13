@@ -5,7 +5,7 @@ import "../styles/posttag.scss";
 const PostTag = ({tag}) => {
     return (
         <div className="posttag">
-            <Link className="posttag-link" to={`/tags/${tag}/`}>
+            <Link className="posttag-link" to={`/tags/${tag.toLowerCase()}/`}>
                 <small>{tag}</small>
             </Link>
         </div>
