@@ -10,13 +10,16 @@ const Index = ({data}) => {
     let blog = [];
 
     posts.forEach(post => {
-        if (post.node.frontmatter.pagetype === "article") {
+        if (post.node.frontmatter.pagetype === "article" && articles.length < 1) {
             articles.push(post)
         } else {
+          if (post.node.frontmatter.pagetype === "blog" && blog.length < 1) {
             blog.push(post)
+          }
+            
         }
     });
-    console.log(articles)
+    //console.log(articles)
     return (
         <Layout>
             <div className="main">
@@ -34,6 +37,7 @@ const Index = ({data}) => {
                         <ContentCard content={blog} />
                     </div>
                 </div>
+                <div style={{color: "white", textAlign: "center"}}>The contacts</div>
                 <Footer />
             </div>
         </Layout>   
@@ -44,12 +48,12 @@ export default Index
 
 export const pageQuery = graphql`
 query indexQuery {
-  allMarkdownRemark {
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC}) {
     totalCount
     edges {
       node {
         html 
-        excerpt(pruneLength: 200)
+        excerpt(pruneLength: 700)
         frontmatter {
           title 
           date 

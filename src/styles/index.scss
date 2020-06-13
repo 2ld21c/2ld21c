@@ -1,5 +1,6 @@
 .main {
-    background-image: linear-gradient(to bottom right, navy, dodgerblue);
+    //background-image: linear-gradient(to bottom right, black, dodgerblue);
+    background: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,7 +11,7 @@
         margin-top: 15vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
+        gap: 20px;
         &-card {
             & h1 {
                 text-align: center;
@@ -32,7 +33,30 @@
 @media only screen and (max-width: 800px) {
     .main {
         &-body {
+            padding: 0 100px;
             grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .main {
+        &-body {
+            margin-top: 20vh;
+            padding: 0 50px;
+            &-card {
+                & h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .main {
+        &-body {
+            padding: 0 25px;
         }
     }
 }

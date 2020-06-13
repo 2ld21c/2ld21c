@@ -1,9 +1,9 @@
 .contentcard {
     // background: #0C0C05;
     padding: 20px 50px;
-    border: 1px solid #49fb35;
+    border: 2px solid #49fb35;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px;
+    // box-shadow: 1px 1px 10px gray;
     & h2 {
         border-bottom: 1px solid;
         color: lightgray;
@@ -11,12 +11,16 @@
         font-weight: 200;
     }
     &-post {
-        padding: 0 50px;
+        // padding: 0 0;
         font-family: Raleway;
-        & h3 {
-            color: white;
-            font-weight: 200;
+        &-link {
+            text-decoration: none;
+            & h3 {
+                color: dodgerblue;
+                font-style: italic;
+            }
         }
+        
         & hr {
             border: .5px solid dodgerblue;
         }
@@ -26,3 +30,11 @@
         }
     }
 }
+
+// @media only screen and (max-width: 500px) {
+//     .contentcard {
+//         &-post {
+//             padding: 0 0;
+//         }
+//     }
+// }

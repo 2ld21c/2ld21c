@@ -1,6 +1,6 @@
 ---
 title: "Article 2"
-date: 2020/06/04
+date: "2020-06-05"
 published: true
 tags: ["crime", "US"]
 pagetype: "article"

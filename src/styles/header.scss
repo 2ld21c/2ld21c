@@ -1,34 +1,110 @@
 .header {
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    &-title {
-        width: 40%;
-        text-align: center;
-        & h1 {
-            font-family: "Special Elite";
-            font-weight: 200;
-        }   
-    }
-    &-links {
-        width: 40%;
+    &-content {
+        background: black;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        &-title {
+            width: 40%;
+            text-align: center;
+            & h1 {
+                font-family: "Special Elite";
+                font-weight: 200;
+            }   
+        }
+        &-links {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            &-link {
+                text-decoration: none;
+                color: lightgray;
+                & h3 {
+                    font-family: "Rubik";
+                    font-weight: 100;
+                    // text-shadow: .5px .5px beige;
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+    &-under {
+        display: none;
+        background-color: rgba($color: #000000, $alpha: 1.0);
         &-link {
             text-decoration: none;
             color: lightgray;
-            & h2 {
+            & h3 {
                 font-family: "Rubik";
                 font-weight: 100;
-                // text-shadow: .5px .5px beige;
                 &:hover {
                     color: gray;
+                }  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        &-content {
+            &-links {
+                flex-direction: column;
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        &-content {
+            &-title {
+                width: 100%;
+            }
+            &-links {
+                display: none;
+            }
+        }
+        &-under {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        &-content {
+            &-title {
+                & h1 {
+                    font-size: 1.65rem;
+                }
+            }
+        }
+        &-under {
+            &-link {
+                & h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header {
+        &-under {
+            &-link {
+                & h3 {
+                    font-size: .80rem;
                 }
             }
         }
