@@ -2,7 +2,7 @@
 title: "Priests of the New Enlightenment"
 date: "2020-06-07"
 published: true
-tags: ["geopolitics", "US", "China"]
+tags: ["geopolitics", "US", "China", "domestic", "sociology", "epistemology", "ontology", "entertainment", "books"]
 pagetype: "article"
 ---
 

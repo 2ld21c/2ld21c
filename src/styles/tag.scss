@@ -1,0 +1,16 @@
+.tag {
+    & button {
+        background-color: dodgerblue;
+        font-family: Rubik;
+        border: none;
+        border-radius: 2px;
+        padding: 3px 5px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    & small {
+        color: white;
+        margin: 2px;
+        font-family: Rubik;
+    }
+}

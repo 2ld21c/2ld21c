@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import ContentCard from "../components/contentcard";
+import Tags from "../components/tags";
 import "../styles/index.scss";
 
 const Index = ({data}) => { 
-    const posts = data.allMarkdownRemark.edges 
+    const posts = data.allMarkdownRemark.edges
+    
     let articles = [];
     let blog = [];
+    let tags = [];
 
     posts.forEach(post => {
         if (post.node.frontmatter.pagetype === "article" && articles.length < 1) {
@@ -15,11 +18,13 @@ const Index = ({data}) => {
         } else {
           if (post.node.frontmatter.pagetype === "blog" && blog.length < 1) {
             blog.push(post)
-          }
-            
+          }    
         }
+        post.node.frontmatter.tags.forEach(tag => {
+          tags.push(tag)
+        })
     });
-    //console.log(articles)
+    
     return (
         <Layout>
             <div className="main">
@@ -37,7 +42,7 @@ const Index = ({data}) => {
                         <ContentCard content={blog} />
                     </div>
                 </div>
-                <div style={{color: "white", textAlign: "center"}}>The contacts</div>
+                <Tags tags={tags} />
                 <Footer />
             </div>
         </Layout>   
