@@ -14,6 +14,7 @@ const ContentCard = ({content}) => {
                         <small>{post.node.frontmatter.date}</small>
                         <hr />
                         <p>{post.node.excerpt}</p>
+                        {post.node.frontmatter.image && <img src={post.node.frontmatter.image}/>}
                     </div>
                     
                 )

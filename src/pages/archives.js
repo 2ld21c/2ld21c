@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Footer from "../components/footer";
 import PostTag from "../components/posttag";
 import "../styles/archives.scss";
 
@@ -40,7 +41,7 @@ const Archives = ({data}) => {
                     )
                 })}
                 </div>
-            
+                <Footer />
             </div>
         </Layout>
     );

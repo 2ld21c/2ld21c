@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import ContentCard from "../components/contentcard";
+import PodcastCard from "../components/podcastcard";
 import Tags from "../components/tags";
 import "../styles/index.scss";
 
@@ -39,7 +40,7 @@ const Index = ({data}) => {
                     </div>
                     <div className="main-body-card">
                         <h1>The Podcast</h1>
-                        <ContentCard content={blog} />
+                        <PodcastCard />
                     </div>
                 </div>
                 <Tags tags={tags} />
@@ -58,7 +59,7 @@ query indexQuery {
     edges {
       node {
         html 
-        excerpt(pruneLength: 700)
+        excerpt(pruneLength: 720)
         frontmatter {
           title 
           date 

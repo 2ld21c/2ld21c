@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Footer from "../components/footer";
 import PostTag from "../components/posttag";
 import "../styles/tagTemplate.scss";
 
@@ -41,7 +42,7 @@ const TagTemplate = ({pageContext, data}) => {
                     )
                 })}
                 </div>
-            
+                <Footer />
             </div>
         </Layout>
     );

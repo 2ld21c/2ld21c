@@ -1,46 +1,50 @@
 .tagtemplate {
-    background: black;
-    padding: 15vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
+    background: black;
+    // padding: 15vh 0;
     &-body {
-        margin: 0 auto;
+        margin: 15vh auto;
         width: 50%;
-    & h2 {
-        margin-bottom: 40px;
-        font-family: Orbitron;
-        color: #49fb35;
-        font-weight: 200;
-        text-align: center;
-    }
-    &-post {
-        margin-bottom: 60px;
-        &-link {
-            text-decoration: none;
-            color: dodgerblue;
-            & h2 {
-                margin-bottom: 0;
-                font-family: Raleway;
+        & h2 {
+            margin-bottom: 40px;
+            font-family: Orbitron;
+            color: #49fb35;
+            font-weight: 200;
+            font-style: normal;
+            text-align: center;   
+        }
+        &-post {
+            margin-bottom: 60px;
+            &-link {
+                text-decoration: none;
                 color: dodgerblue;
-                font-style: italic;
-                font-weight: 600;
-                text-align: left;
+                & h2 {
+                    margin-bottom: 0;
+                    font-family: Raleway;
+                    color: dodgerblue;
+                    font-style: italic;
+                    font-weight: 600;
+                    text-align: left;
+                }
+            }
+            &-date {
+                color: white;
+            }
+            &-under {
+                border: 1px solid dodgerblue;
+            }
+            & p {
+                margin-bottom: 0;
+                color: white;
+            }
+            &-tag-wrap {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  
             }
         }
-        &-date {
-            color: white;
-        }
-        &-under {
-            border: 1px solid dodgerblue;
-        }
-        & p {
-            margin-bottom: 0;
-            color: white;
-        }
-        &-tag-wrap {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));  
-        }
-    }
     }
     
 
@@ -48,12 +52,17 @@
 
 @media only screen and (max-width: 1200px) {
     .tagtemplate {
-        padding: 20vh 0;
+        &-body {
+            margin: 20vh auto;
+        }
+        
     }
 }
 
 @media only screen and (max-width: 600px) {
     .tagtemplate {
-        padding: 25vh 0;
+        &-body {
+            margin: 25vh auto;
+        }
     }
 }
