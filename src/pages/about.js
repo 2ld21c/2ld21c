@@ -1,11 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
+import SEO from "../components/seo";
 import "../styles/about.scss";
 
 const About = () => {
     return (
         <Layout>
+            <SEO title="About" keywords={[`2ld21c`, `the condemnation game`, `geopolitics`, `philosophy`, `psychology`]} />
             <div className="about">
                 <div className="about-body">
                     <h1>About 2LD21C</h1>

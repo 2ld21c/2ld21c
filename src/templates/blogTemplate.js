@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
+import SEO from "../components/seo";
 import "../styles/article.scss";
 
 const Blog = ({data}) => {
@@ -11,6 +12,7 @@ const Blog = ({data}) => {
 
     return (
         <Layout>
+            <SEO title={post.frontmatter.title} />
             <div className={`article ${darkMode ? `dark-mode` : ``}`}>
                 <div className="article-main">
                     <div className="article-main-toggle">

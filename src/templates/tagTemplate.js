@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import PostTag from "../components/posttag";
+import SEO from "../components/seo";
 import "../styles/tagTemplate.scss";
 
 const TagTemplate = ({pageContext, data}) => {
@@ -14,6 +15,7 @@ const TagTemplate = ({pageContext, data}) => {
 
     return (
         <Layout>
+            <SEO title={tag} />
             <div className="tagtemplate">
                 <div className="tagtemplate-body">
                 <i><h2>{tagHeader}</h2></i>

@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import PostTag from "../components/posttag";
+import SEO from "../components/seo";
 import "../styles/archives.scss";
 
 const Archives = ({data}) => {
@@ -13,6 +14,7 @@ const Archives = ({data}) => {
 
     return (
         <Layout>
+          <SEO title="Archives" keywords={[`2ld21c`, `the condemnation game`, `geopolitics`, `philosophy`, `psychology`]} />
             <div className="archives">
                 <div className="archives-body">
                 <i><h2>{tagHeader}</h2></i>

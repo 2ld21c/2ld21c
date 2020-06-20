@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import ContentCard from "../components/contentcard";
 import PodcastCard from "../components/podcastcard";
 import Tags from "../components/tags";
+import SEO from "../components/seo";
 import "../styles/index.scss";
 
 const Index = ({data}) => { 
@@ -28,6 +29,7 @@ const Index = ({data}) => {
     
     return (
         <Layout>
+          <SEO title="Home" keywords={[`geopolitics`, `philosophy`, `psychology`, `sociology`]} />
             <div className="main">
                 <div className="main-body">
                     <div className="main-body-card">
