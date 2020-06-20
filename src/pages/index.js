@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "../components/layout";
 import Footer from "../components/footer";
 import ContentCard from "../components/contentcard";
