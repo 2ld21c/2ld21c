@@ -7,7 +7,7 @@ import "../styles/article.scss";
 const Article = ({data}) => {
     const post = data.markdownRemark;
     console.log(post)
-    const [darkMode, setDarkMode] = useState(getInitialMode());
+    const [darkMode, setDarkMode] = useState(typeof window !== 'undefined' ? getInitialMode() : false);
     useEffect(() => {
         localStorage.setItem("dark", JSON.stringify(darkMode))
     }, [darkMode])

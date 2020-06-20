@@ -1,4 +1,11 @@
 module.exports = {
+  siteMetadata: {
+    title: "To Live and Die in the 21st Century",
+    titleTemplate: "%s ・ 2LD21C",
+    description: "Philosophy, psychology, sociology, geopolitics,... what it means to be human in the 21st century.",
+    url: "https://2ld21c.netlify.app",
+    image: "/2ld21c_pod200.jpg"
+  },
     plugins: [
         `gatsby-plugin-sass`,
         {
