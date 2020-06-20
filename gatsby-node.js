@@ -80,4 +80,22 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
+
+    const postsPerPage = 3
+    const numPages = Math.ceil(result.data.allMarkdownRemark.edges.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/archives` : `/archives/${i+1}`,
+        component: path.resolve("./src/templates/archiveTemplate.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i*postsPerPage, 
+          numPages,
+          currentPage: i+1
+        }
+      })
+    })
+
+
 }

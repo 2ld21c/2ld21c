@@ -46,7 +46,11 @@
             }
         }
         &-pagination {
-            &-link {
+            &-link-left {
+                color: dodgerblue;
+                float: left;
+            }
+            &-link-right {
                 color: dodgerblue;
                 float: right;
             }
