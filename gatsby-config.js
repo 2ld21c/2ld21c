@@ -25,6 +25,15 @@ module.exports = {
         },
         `gatsby-transformer-remark`,
         {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+            name: `images`,
+            path: `${__dirname}/src/images/`
+          }
+        },
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
               fonts: [
