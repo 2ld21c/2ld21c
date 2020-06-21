@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
               frontmatter {
                 tags
                 pagetype
-                
+                image
               }
             }
           }
@@ -44,7 +44,8 @@ exports.createPages = async ({ graphql, actions }) => {
           path: node.fields.slug,
           component: articleTemplate,
           context: {
-            slug: node.fields.slug
+            slug: node.fields.slug,
+            image: node.frontmatter.image 
           }
         });
       } else { 
